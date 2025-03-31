@@ -1,6 +1,8 @@
-
+import Address from "../models/adress.js";
 
 function State(){
+
+    this.Address = new Address();
     this.btnSave = null;
     this.btnClear = null;
     this.inputCep = null;
