@@ -1,6 +1,44 @@
+:root{
+    --color-orange: #ff8400;
+    --bg-black: #000;
+    --color-withe: #fff;
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+    background-color: var(--bg-black);
+}
+
+.nav-container{
+    height: 80px;
+    background-color: var(--color-orange);
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-main{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-main h1{
+    color: var(--color-withe);
+    font-size: 36px;
+}
+
+.contact-link{
+    color: var(--color-withe);
+    cursor: pointer;
 }
