@@ -2,6 +2,10 @@
     --color-orange: #ff8400;
     --bg-black: #000;
     --color-withe: #fff;
+    --bg-card: #333333;
+    --error-msg: #faa;
+    --inp-color: #C9C9C9;
+    --disable-color: #ddd;
 }
 
 *{
@@ -41,4 +45,48 @@ html, body{
 .contact-link{
     color: var(--color-withe);
     cursor: pointer;
+}
+
+.form-container{
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.card-form{
+    max-width: 600px;
+    width: 100%;
+    background-color: var(--bg-card);
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form-control{
+    margin-bottom: 20px;
+}
+
+.form-control label{
+    display: none;
+}
+
+.error-message{
+    margin-top: 5px;
+    color: var(--error-msg);
+}
+
+.form-input{
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    border-style: none;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.form-input::placeholder{
+    color: var(--inp-color);
+}
+
+.form-input:disabled{
+    background-color: var(--disable-color);
 }
