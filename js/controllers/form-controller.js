@@ -30,5 +30,19 @@ export function init(){
     document.errorCep = document.querySelector('[data-error="cep"]');
     document.errorNumber = document.querySelector('[data-error="number"]');
 
-    console.log(state)
+    state.inputNumber.addEventListener('change', handleInputNumberChange);
+}
+
+function handleInputNumberChange(event){
+    if(event.target.value == ""){
+        setFormError("number", "Campo requerido");
+    }
+    else{
+        setFormError("number", "");
+    }
+}
+
+function setFormError(key, value){
+    const element = document.querySelector(`[data-error="${key}"]`);
+    element.innerHTML = value;
 }
