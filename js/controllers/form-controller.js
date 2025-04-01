@@ -1,10 +1,12 @@
-import Address from "../models/adress.js";
+import Address from '../models/address.js';
 
-function State(){
+function State() {
 
-    this.Address = new Address();
+    this.address = new Address();
+
     this.btnSave = null;
     this.btnClear = null;
+
     this.inputCep = null;
     this.inputStreet = null;
     this.inputNumber = null;
@@ -14,10 +16,9 @@ function State(){
     this.errorNumber = null;
 }
 
-const state = new State ();
+const state = new State();
 
-
-export function init(){
+export function init() {
 
     state.inputCep = document.forms.newAddress.cep;
     state.inputStreet = document.forms.newAddress.street;
@@ -27,22 +28,41 @@ export function init(){
     state.btnSave = document.forms.newAddress.btnSave;
     state.btnClear = document.forms.newAddress.btnClear;
 
-    document.errorCep = document.querySelector('[data-error="cep"]');
-    document.errorNumber = document.querySelector('[data-error="number"]');
+    state.errorCep = document.querySelector('[data-error="cep"]');
+    state.errorNumber = document.querySelector('[data-error="number"]');
 
-    state.inputNumber.addEventListener('change', handleInputNumberChange);
+    state.inputNumber.addEventListener('change', handleInputNumberChange);;
+    state.btnClear.addEventListener('click', handleBtnClearClick);
+
 }
 
-function handleInputNumberChange(event){
-    if(event.target.value == ""){
+function handleInputNumberChange(event) {
+    if (event.target.value == "") {
         setFormError("number", "Campo requerido");
     }
-    else{
+    else {
         setFormError("number", "");
     }
 }
 
-function setFormError(key, value){
+function handleBtnClearClick(event) {
+    event.preventDefault();
+    clearForm();
+}
+
+function clearForm() {
+    state.inputCep.value = "";
+    state.inputCity.value = "";
+    state.inputNumber.value = "";
+    state.inputStreet.value = "";
+
+    setFormError("cep", "");
+    setFormError("number", "");
+
+    state.inputCep.focus();
+}
+
+function setFormError(key, value) {
     const element = document.querySelector(`[data-error="${key}"]`);
     element.innerHTML = value;
 }
