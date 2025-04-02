@@ -1,0 +1,34 @@
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background-color: var(--bg-halfblack);
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.modal-container.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box{
+    width: 100%;
+    max-width: 480px;
+    background-color: var(--bg-modalbox);
+    padding: 20px;
+    border-radius: 10px;
+    border: 10px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content{
+    color: var(--color-withe);
+    margin-bottom: 40px;
+}

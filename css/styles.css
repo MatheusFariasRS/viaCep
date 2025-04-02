@@ -1,3 +1,6 @@
+@import 'modal.css';
+@import'buttons.css';
+
 :root{
     --color-blue: #3b8ae6;
     --bg-black: #000;
@@ -7,6 +10,9 @@
     --inp-color: #C9C9C9;
     --disable-color: #ddd;
     --color-cep: #8F8F8F;
+    --bg-halfblack: rgba(0, 0, 0, 0.5);
+    --bg-modalbox: #444;
+    --border-color: #aaa;
 }
 
 *{
@@ -92,29 +98,6 @@ html, body{
     background-color: var(--disable-color);
 }
 
-.btn-container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn{
-    width: 250px;
-    height: 50px;
-    background-color: var(--color-blue);
-    border: 0;
-    border-radius: 4px;
-    color: var(--color-withe);
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.btn-left{
-    margin-right: 10px;
-}
-
-.btn-right{
-    margin-left: 10px;  
-}
 
 .list-container{
     width: 100%;
