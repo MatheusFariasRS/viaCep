@@ -1,5 +1,5 @@
-@import './modal.css';
-@import'./buttons.css';
+@import 'modal.css';
+@import'buttons.css';
 
 :root{
     --color-blue: #3b8ae6;
